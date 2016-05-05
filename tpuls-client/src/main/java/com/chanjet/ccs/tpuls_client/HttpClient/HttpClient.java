@@ -18,17 +18,17 @@ public class HttpClient {
 	}
 	
 	private static String buildHttpBody() {
-		StringBuilder sb = new StringBuilder("GET /hellopretty HTTP/1.1\r\n").append("  Host: 192.168.1.105:4002\r\n");
-		sb.append("Connection: keep-alive")
-		.append("Cache-Control: no-cache")
-		.append("User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36");
-		sb.append("Accept: */*");
-		sb.append("Accept-Encoding: gzip, deflate, sdch");
-		sb.append("Accept-Language: zh-CN,zh;q=0.8");
-		sb.append("Content-Length: 0");
+		StringBuilder sb = new StringBuilder("GET /hellopretty HTTP/1.1 \n\n").append("  Host: 192.168.1.105:4002 \n\n");
+		sb.append("Connection: keep-alive \n\n")
+		.append("Cache-Control: no-cache \n\n")
+		.append("User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36 \n\n");
+		sb.append("Accept: */* \n\n");
+		sb.append("Accept-Encoding: gzip, deflate, sdch \n\n");
+		sb.append("Accept-Language: zh-CN,zh;q=0.8 \n\n");
+		sb.append("Content-Length: 0 \n\n");
 		
 		StringBuilder mutilHttpRquest =  new StringBuilder();
-		for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 1; i++) {
 			mutilHttpRquest.append(sb.toString());
 		}
 		

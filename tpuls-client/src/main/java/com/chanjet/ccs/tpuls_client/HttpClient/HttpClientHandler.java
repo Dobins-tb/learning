@@ -115,11 +115,13 @@ public class HttpClientHandler implements Runnable{
 	}
 	
 	private void doWrite(SocketChannel channel) {
-		ByteBuffer buff = ByteBuffer.allocate(2048);
+		ByteBuffer buff = ByteBuffer.allocate(4096);
+		log.info("http body size : " + HttpClient.httpBody.length());
 		buff.put(HttpClient.httpBody.getBytes());
 		buff.flip();
 		try {
-			channel.write(buff);
+			int writen = channel.write(buff);
+			log.info("当前写入channel byte :" + writen);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
