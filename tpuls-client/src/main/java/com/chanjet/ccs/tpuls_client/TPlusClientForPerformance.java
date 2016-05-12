@@ -48,7 +48,7 @@ public class TPlusClientForPerformance {
 	
 //	private final static String HOST = "182.92.245.70";//"172.18.2.210";//"172.18.22.35";//"172.18.22.34";//"10.11.64.16";//"172.18.9.202";
 	
-	private final static String HOST = "172.16.200.4";
+	private final static String HOST = "172.18.21.217";
 	private final static int PORT = 8992;
 	private static String appkey1 = "hahaha";
 	private static String uuid1 = "b3df71d4-7b2b-4a86-a490-f7155b0a1a2b";//"c654e2cf-6132-4269-832d-babe1aacab60";
